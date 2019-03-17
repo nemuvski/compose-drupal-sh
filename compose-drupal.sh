@@ -88,7 +88,8 @@ drush si --yes \
   --locale=ja
 
 # デフォルトタイムゾーンをAsia/Tokyoに設定
-drush vset --yes date_default_timezone 'Asia/Tokyo'
+drush cset --yes system.date timezone.default Asia/Tokyo
+drush cset --yes system.date country.default JP
 
 
 ### ハッシュ値を.envから読み込むように変更 ###
